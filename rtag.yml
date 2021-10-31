@@ -1,0 +1,62 @@
+types:
+  Username: string
+  Tile:
+    type: TerrainType
+  Steering:
+    - NONE
+    - LEFT
+    - RIGHT
+  Acceleration:
+    - NONE
+    - ACCELERATING
+    - DECELERATING
+  Powerup:
+    - SPEED_BOOST
+  TerrainType:
+    - ROAD
+    - GRASS
+    - SAND
+  ObjectType:
+    - FLAG
+    - OBSTACLE
+    - SPEED_BOOST
+  Position:
+    x: number
+    y: number
+  Dimension:
+    width: number
+    height: number
+  PlayerInfo:
+    name: Username
+    dimension: Dimension
+    position: Position
+    rotation: number
+    score: number
+    powerup?: Powerup
+  MapObject:
+    type: ObjectType
+    position: Position
+    dimension: Dimension
+    rotation: number
+  PlayerState:
+    map: Tile[]
+    objects: MapObject[]
+    players: PlayerInfo[]
+
+methods:
+  createGame:
+  joinGame:
+  startGame:
+  setSteering:
+    steering: Steering
+  setAcceleration:
+    acceleration: Acceleration
+
+auth:
+  anonymous:
+    separator: "-"
+
+userState: PlayerState
+initialize: createGame
+error: string
+tick: true
