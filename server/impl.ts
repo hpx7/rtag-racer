@@ -54,7 +54,7 @@ export class Impl implements Methods<InternalState> {
     return Response.error("Not implemented");
   }
   setSteering(state: InternalState, user: UserData, ctx: Context, request: ISetSteeringRequest): Response {
-    throw new Error("Method not implemented.");
+    return Response.error("Not implemented");
   }
   setAcceleration(state: InternalState, user: UserData, ctx: Context, request: ISetAccelerationRequest): Response {
     return Response.error("Not implemented");

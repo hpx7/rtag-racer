@@ -59,4 +59,4 @@ auth:
 userState: PlayerState
 initialize: createGame
 error: string
-tick: true
+tick: 100
